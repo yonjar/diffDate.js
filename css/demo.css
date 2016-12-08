@@ -1,0 +1,47 @@
+body {
+  background-color: #1b1c30;
+  color: azure;
+}
+
+a {
+  text-decoration: none;
+  color: #f0fffc;
+}
+
+pre, code {
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0;
+  background-color: #4e518a;
+  color: #e6f4f4;
+  font-family: "Monaco", "Consolas", monospace;
+}
+
+h1 {
+  font-size: 64px;
+  text-align: center;
+}
+
+.author {
+  font-size: 28px;
+  color: #8ce3fd;
+}
+
+.container {
+  width: 70%;
+  margin: 10px auto;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding: 5px 15px 10px;
+  border-radius: 5px;
+  background-color: cornflowerblue;
+}
+
+.diffDate-init {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=demo.css.map */

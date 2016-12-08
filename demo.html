@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>diffDate.js</title>
+  <link rel="stylesheet" href="css/demo.css">
+</head>
+<body>
+  <h1>diffDate.js <span class="author">by yonjar</span></h1>
+  
+
+  <div class="container">
+    <div class="describe">
+      <div class="section">
+        <h2>準備工作</h2>
+        <h3>在HTML中引入diffDate.js</h3>
+        <code>&lt;script src=&quot;dist/diffDate.js&quot;&gt;&lt;/script&gt;</code>
+        
+        <h3>新建一個帶有"data-dateString"屬性的空標籤</h3>
+        <code>&lt;span id=&quot;diffDate-1&quot; data-dateString=&quot;December 7, 2016 17:16:00&quot;&gt;&lt;/span&gt;</code>
+        <p>"data-dateString" : 表示日期的字符串值。该字符串应该能被 <a title="Date.parse() 方法解析一个表示某个日期的字符串，并返回从1970-1-1 00:00:00 UTC 到该日期对象（该日期对象的UTC时间）的毫秒数，如果该字符串无法识别，或者一些情况下，包含了不合法的日期数值（如：2015-02-31），则返回值为NaN。" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/parse"><code>Date.parse()</code></a> 方法识别（符合&nbsp;<a title="http://tools.ietf.org/html/rfc2822#page-14" style="white-space: pre-line;" href="http://tools.ietf.org/html/rfc2822#page-14" class="external-icon external">IETF-compliant RFC 2822 timestamps</a>&nbsp;或&nbsp;<a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15" class="external external-icon">version of ISO8601</a>）。</p>
+        
+        <h3>最後</h3>
+        <pre>  let df = new diffDate();
+  df.init("#diffDate-1");
+  df.init("#diffDate-2");</pre>
+      </div>
+      
+      <div class="section">
+        <h2>用法一: date是過去的</h2>
+        <p><span id="diffDate-1" class="diffDate-init" data-dateString="December 7, 2016 17:16:00"></span></p>
+        <code>&lt;span id=&quot;diffDate-1&quot; data-dateString=&quot;December 7, 2016 17:16:00&quot;&gt;&lt;/span&gt;</code>
+      </div>
+
+      <div class="section">
+        <h2>用法二: date是未來的</h2>
+        <p><span id="diffDate-2" class="diffDate-init" data-dateString="December 9, 2096 19:00:00"></span></p>
+        <code>&lt;span id=&quot;diffDate-2&quot; data-dateString=&quot;December 9, 2096 19:00:00&quot;&gt;&lt;/span&gt;</code>
+      </div>
+
+      <div class="section">
+        <h2>用法三: 短字符串(只剩時間部分)</h2>
+        <p><span id="diffDate-3" class="diffDate-init" data-dateString="June 7, 2016 17:16:00" data-isShortString="true"></span></p>
+        <p>加上<code>data-isShortString="true"</code>即可</p>
+        <code>&lt;span id=&quot;diffDate-3&quot; data-dateString=&quot;June 7, 2016 17:16:00&quot; data-isShortString=&quot;true&quot;&gt;&lt;/span&gt;</code>
+      </div>
+    </div>
+  </div>
+  <script src="dist/diffDate.js"></script>
+  <script>
+    let df = new diffDate();
+    df.init("#diffDate-1");
+    df.init("#diffDate-2");
+    df.init("#diffDate-3");
+  </script>
+</body>
+</html>
