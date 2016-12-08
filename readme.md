@@ -1,4 +1,4 @@
 diffDate.js
 ---
 Easy to compare one date and now.  
-demo: 
+demo: https://yonjar.github.io/diffDate.js/demo.html
