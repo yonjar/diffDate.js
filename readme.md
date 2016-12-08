@@ -1,4 +1,4 @@
 diffDate.js
 ---
-Easy to compare two date.  
+Easy to compare one date and now.  
 demo: 
